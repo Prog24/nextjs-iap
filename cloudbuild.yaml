@@ -1,0 +1,11 @@
+steps:
+  - name: node
+    entrypoint: yarn
+    args: ["install"]
+  - name: node
+    entrypoint: yarn
+    args: ["build"]
+  - name: gcr.io/cloud-builders/gcloud
+    args: ["app", "deploy", "app.yaml", "--project=next-iap-sample", "--quiet"]
+options:
+  logging: CLOUD_LOGGING_ONLY
