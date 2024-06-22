@@ -30,6 +30,7 @@ export default function Home() {
       ['https://cloud.google.com/iap']
     );
     const payload = ticket.getPayload();
+    console.log(payload)
     return {
       email: payload?.email,
       sub: payload?.sub,
