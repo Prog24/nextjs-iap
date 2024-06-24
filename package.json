@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check": "biome check",
+    "check:write": "biome check --write",
+    "prepare": "husky"
   },
   "dependencies": {
     "gcp-metadata": "6.1.0",
@@ -19,6 +22,7 @@
     "@types/node": "20.14.8",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "husky": "9.0.11",
     "typescript": "5.4.5"
   }
 }
